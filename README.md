@@ -59,7 +59,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-12-tessera-versus-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts December 12, 2022 20:00 UTC
-- Ends December 17, 2022 20:00 UTC
+- Ends December 19, 2022 20:00 UTC
 
 ## C4udit / Publicly Known Issues
 

@@ -49,16 +49,16 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 # Tessera - Versus contest details
 - Total Prize Pool: $50,500 USDC
-  - HM awards: $28,500 USDC
-  - QA report awards: TBD
+  - HM awards: $16,500 USDC
+  - QA report awards: $2,000 USDC
   - Gas report awards: $1,500 USDC
-  - Judge + presort awards: $10,000 USDC
+  - Judge + presort awards: $2,870 USDC
   - Scout awards: $500 USDC 
-  - Mitigation review contest: $10,000 USDC
+  - Mitigation review contest: $8,700 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-12-tessera-versus-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts December 12, 2022 20:00 UTC
+- Starts December 16, 2022 20:00 UTC
 - Ends December 19, 2022 20:00 UTC
 
 ## C4udit / Publicly Known Issues

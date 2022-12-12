@@ -48,7 +48,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 ---
 
 # Tessera - Versus contest details
-- Total Prize Pool: $50,500 USDC
+- Total Prize Pool: $32,070 USDC
   - HM awards: $16,500 USDC
   - QA report awards: $2,000 USDC
   - Gas report awards: $1,500 USDC

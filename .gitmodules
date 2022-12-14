@@ -1,0 +1,17 @@
+[submodule "lib/forge-std"]
+	ignore = dirty
+	path = lib/forge-std
+	url = https://github.com/brockelmore/forge-std
+[submodule "lib/openzeppelin-contracts"]
+	ignore = dirty
+	path = lib/openzeppelin-contracts
+	url = https://github.com/Openzeppelin/openzeppelin-contracts
+	branch = v4.8.0
+[submodule "lib/seaport"]
+	ignore = dirty
+	path = lib/seaport
+	url = https://github.com/ProjectOpensea/seaport
+[submodule "lib/solmate"]
+	ignore = dirty
+	path = lib/solmate
+	url = https://github.com/Rari-capital/solmate

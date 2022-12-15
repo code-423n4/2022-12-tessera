@@ -135,7 +135,7 @@ If there is excess ETH in the pool after the purchase is made, when users claim 
 ### Files in scope
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| src/seaport/modules/OptimisticListingSeaport | 318 | Module contract for listing vault assets through the Seaport protocol | [Seaport](https://github.com/ProjectOpenSea/seaport) |
+| src/seaport/modules/OptimisticListingSeaport.sol | 318 | Module contract for listing vault assets through the Seaport protocol | [Seaport](https://github.com/ProjectOpenSea/seaport) |
 | src/seaport/targets/SeaportLister.sol | 35 | Target contract for listing orders on Seaport | [Seaport](https://github.com/ProjectOpenSea/seaport) |
 | src/modules/GroupBuy.sol | 290 | Module contract for pooling group funds to purchase and vault NFTs | [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts) |
 | src/lib/MinPriorityQueue.sol | 103 | Queue used for smart batch auction in GroupBuy | []() |
@@ -214,7 +214,6 @@ If there is excess ETH in the pool after the purchase is made, when users claim 
 > Required **> node 12**
 
 > On windows use WSL or the Docker image
-
 #### Install Foundry on Mac/Unix:
 
 ```bash
@@ -226,6 +225,16 @@ curl -L https://foundry.paradigm.xyz | bash
 ```
 docker pull ghcr.io/foundry-rs/foundry:latest
 ```
+
+#### Environment variables:
+
+```
+ETHERSCAN_API_KEY=
+GOERLI_RPC_URL=
+PRIVATE_KEY=
+```
+
+Or copy .env.example to .env which has a public RPC
 
 #### Install node packages:
 
@@ -264,17 +273,8 @@ forge test --gas-report
 npm run lint
 ```
 
-#### Environment variables:
-
-```
-ETHERSCAN_API_KEY=
-GOERLI_RPC_URL=
-PRIVATE_KEY=
-```
-
 #### Deploy Contracts to GOERLI
 
 ```
-forge script script/SeaportOL.s.sol:DeployScript --rpc-url $GOERLI_RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --private-key $PRIVATE_KEY --broadcast
-forge script script/GroupBuy.s.sol:DeployScript --rpc-url $GOERLI_RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --private-key $PRIVATE_KEY --broadcast
+forge script script/Seaport.s.sol:SeaportDeploy --rpc-url $GOERLI_RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --private-key $PRIVATE_KEY --broadcast
 ```

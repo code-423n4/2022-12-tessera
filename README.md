@@ -228,9 +228,11 @@ docker pull ghcr.io/foundry-rs/foundry:latest
 
 #### Environment variables:
 
+GOERLI_RPC_URL is Required
+ETHERSCAN_API_KEY and PRIVATE_KEY are only required if you want to run the foundry script
 ```
-ETHERSCAN_API_KEY=
 GOERLI_RPC_URL=
+ETHERSCAN_API_KEY=
 PRIVATE_KEY=
 ```
 
@@ -271,10 +273,4 @@ forge test --gas-report
 
 ```
 npm run lint
-```
-
-#### Deploy Contracts to GOERLI
-
-```
-forge script script/Seaport.s.sol:SeaportDeploy --rpc-url $GOERLI_RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --private-key $PRIVATE_KEY --broadcast
 ```

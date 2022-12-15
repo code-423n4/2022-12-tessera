@@ -230,21 +230,19 @@ docker pull ghcr.io/foundry-rs/foundry:latest
 
 Our tests that interact with Seaport require forking of Goerli currently.  There is an Alchemy RPC_URL with an API key that will remain active during the contest
 
-Please be respectful of the key in the .example.env and replace it with your personal RPC_URL if you have one.
-
-Below we have broken up test commands to run with and without forking where the tests without forking don't run any tests that interact with Seaport, so please keep that in mind as your explore the tests / make edits to them
-
-NOTE: For fastest performance in forked mode use an Infura Goerli RPC URL.  Alchemy in my experience is between 2-5x slower than Infura for forked tests
-GOERLI_RPC_URL is Required
-ETHERSCAN_API_KEY and PRIVATE_KEY are only required if you want to run the foundry script
+Setup a .env with the following variables:
 
 ```
 GOERLI_RPC_URL=
-ETHERSCAN_API_KEY=
-PRIVATE_KEY=
 ```
 
-Or copy .env.example to .env which has defined a temporary RPC_URL that will remain active for the duration of the contest
+You copy .env.example to .env which has defined a temporary RPC_URL that will remain active for the duration of the contest
+
+Please be respectful of the key in the .example.env and replace it with your personal RPC_URL if you have one.
+
+NOTE: For fastest performance in forked mode use an Infura Goerli RPC URL.  Alchemy in my experience is between 2-5x slower than Infura for forked tests
+
+Below we have broken up test commands to run with and without forking where the tests without forking don't run any tests that interact with Seaport, so please keep that in mind as your explore the tests / make edits to them
 
 #### Install node packages:
 

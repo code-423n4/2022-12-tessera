@@ -10,7 +10,7 @@ import {SeaportLister} from "../src/seaport/targets/SeaportLister.sol";
 import {Supply} from "../src/targets/Supply.sol";
 import {VaultFactory} from "../src/VaultFactory.sol";
 import {VaultRegistry} from "../src/VaultRegistry.sol";
-import {WETH} from "@rari-capital/solmate/src/tokens/WETH.sol";
+import {WETH} from "solmate/tokens/WETH.sol";
 
 import {ConduitControllerInterface} from "seaport/interfaces/ConduitControllerInterface.sol";
 import {IERC1155} from "../src/interfaces/IERC1155.sol";
@@ -41,7 +41,8 @@ contract SeaportDeploy is Script {
     address constant SEAPORT = 0x00000000006c3852cbEf3e08E8dF289169EdE581;
     address constant ZONE = address(0);
     address constant CONTROLLER = 0x00000000F9490004C11Cef243f5400493c00Ad63;
-    bytes32 constant CONDUIT_KEY = 0x0000007b02230091a7ed01230072f7006a004d60a8d4e71d599b8104250f0000;
+    bytes32 constant CONDUIT_KEY =
+        0x0000007b02230091a7ed01230072f7006a004d60a8d4e71d599b8104250f0000;
     address constant OPENSEA_RECIPIENT = address(0);
 
     uint256 constant PROPOSAL_PERIOD = 0;
@@ -107,7 +108,13 @@ contract SeaportDeploy is Script {
 
     function propose() public {
         OfferItem[] memory offers = new OfferItem[](1);
-        OfferItem memory item = OfferItem(ItemType.ERC721, address(erc721), tokenId, listingPrice, listingPrice);
+        OfferItem memory item = OfferItem(
+            ItemType.ERC721,
+            address(erc721),
+            tokenId,
+            listingPrice,
+            listingPrice
+        );
         offers[0] = item;
 
         IERC1155(rae).setApprovalForAll(address(optimisticModule), true);

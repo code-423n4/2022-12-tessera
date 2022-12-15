@@ -276,6 +276,5 @@ npm run lint
 #### Deploy Contracts to GOERLI
 
 ```
-forge script script/SeaportOL.s.sol:DeployScript --rpc-url $GOERLI_RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --private-key $PRIVATE_KEY --broadcast
-forge script script/GroupBuy.s.sol:DeployScript --rpc-url $GOERLI_RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --private-key $PRIVATE_KEY --broadcast
+forge script script/Seaport.s.sol:SeaportDeploy --rpc-url $GOERLI_RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --private-key $PRIVATE_KEY --broadcast
 ```
